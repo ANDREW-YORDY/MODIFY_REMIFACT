@@ -4,7 +4,7 @@ import java.awt.HeadlessException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
+//import javax.swing.JOptionPane;
 
 public class DBAdminConn {
 
@@ -15,6 +15,7 @@ public class DBAdminConn {
 //    String ip = "localhost";
     String user = "sa";
     String passw = "**lamisma2017**";
+    //String DB = "CIUNIROCA";
     String DB = "PRUEBASSISTEMASS";
     String pto = "1433";
     String ip = "192.168.45.9";

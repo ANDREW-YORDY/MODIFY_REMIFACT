@@ -61,6 +61,11 @@ public class CORERemiFact {
 
     // Método para actualizar el NRODCTO en ambas tablas
     public void updateNroDctoInInBothTables(String oldCod, String newCod) {
+        int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea actualizar la remisión?", "Confirmar actualización", JOptionPane.YES_NO_OPTION);
+        if (confirm != JOptionPane.YES_OPTION) {
+            return;
+        }
+
         String updateQuery1 = "UPDATE TRADE SET NRODCTO = ? WHERE NRODCTO = ?";
         String updateQuery2 = "UPDATE MVTRADE SET NRODCTO = ? WHERE NRODCTO = ?";
 
@@ -77,13 +82,14 @@ public class CORERemiFact {
             int rowsUpdated2 = statement2.executeUpdate();
 
             if (rowsUpdated1 > 0 && rowsUpdated2 > 0) {
-                JOptionPane.showMessageDialog(null, "Código actualizado correctamente en ambas tablas.");
+                //JOptionPane.showMessageDialog(null, "Remisión actualizado correctamente en ambas tablas.");
+                JOptionPane.showMessageDialog(null, "Remisión actualizada correctamente.");
             } else {
-                JOptionPane.showMessageDialog(null, "No se encontraron registros con el código especificado.");
+                JOptionPane.showMessageDialog(null, "No se encontraron registros con la remisión ingresada.");
             }
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al actualizar el código: " + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al actualizar la remisión: " + ex.getMessage());
             ex.printStackTrace();
         }
     }
@@ -110,10 +116,10 @@ public class CORERemiFact {
             // Obtener el valor actual de REMIFACT
             String currentRemifact = getCurrentRemifact(nrodcto);
 
-            // Guardar el valor de REMIFACT en la columna NOTA, incluso si actualmente es nulo
-            String updateNotaQuery = "UPDATE TRADE SET NOTA = 'FACTURA ANTERIOR: ' + ? WHERE ORIGEN = 'FAC' AND TIPODCTO = 'RE' AND NRODCTO = ?";
+            // Guardar el valor actual de REMIFACT en la columna NOTA
+            String updateNotaQuery = "UPDATE TRADE SET NOTA = ? WHERE ORIGEN = 'FAC' AND TIPODCTO = 'RE' AND NRODCTO = ?";
             try (PreparedStatement updateNotaStmt = conn.prepareStatement(updateNotaQuery)) {
-                updateNotaStmt.setString(1, currentRemifact);
+                updateNotaStmt.setString(1, "FACTURA ANTERIOR: " + currentRemifact);
                 updateNotaStmt.setString(2, nrodcto);
                 updateNotaStmt.executeUpdate();
             }
@@ -133,7 +139,7 @@ public class CORERemiFact {
                 if (rowsUpdated1 > 0 && rowsUpdated2 > 0) {
                     JOptionPane.showMessageDialog(null, "Campos actualizados correctamente en ambas tablas.");
                 } else {
-                    JOptionPane.showMessageDialog(null, "No se encontraron registros con el código especificado.");
+                    JOptionPane.showMessageDialog(null, "No se encontraron registros con la remisión ingresada.");
                 }
             }
 

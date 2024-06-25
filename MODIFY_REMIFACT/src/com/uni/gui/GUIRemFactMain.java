@@ -123,7 +123,7 @@ public class GUIRemFactMain extends javax.swing.JFrame {
         );
 
         jButton_UPDATEBTN_REMFAC.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton_UPDATEBTN_REMFAC.setText("ACTUALIZAR FACTURA");
+        jButton_UPDATEBTN_REMFAC.setText("ACTUALIZAR REMISION");
         jButton_UPDATEBTN_REMFAC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jButton_UPDATEBTN_REMFAC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

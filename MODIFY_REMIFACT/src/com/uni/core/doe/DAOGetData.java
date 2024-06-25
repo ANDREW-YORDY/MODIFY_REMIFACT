@@ -1,4 +1,3 @@
-//CORERemfactObtain
 package com.uni.core.doe;
 
 import java.sql.Connection;
@@ -16,20 +15,20 @@ public class DAOGetData {
         this.conn = conn;
     }
 
-    public void DisplayDataTables(String NumRemi, JTextArea textArea) {
-        if (NumRemi == null || NumRemi.trim().isEmpty()) {
-            countEmptyRemisionRecords(textArea);
+    public void displayDataTables(String nrodcto, JTextArea textArea) {
+        if (nrodcto == null || nrodcto.trim().isEmpty()) {
+            countEmptyNrodctoRecords(textArea);
         } else {
-            displayDataWithRemision(NumRemi, textArea);
+            displayDataWithNrodcto(nrodcto, textArea);
         }
     }
 
-    private void displayDataWithRemision(String NumRemi, JTextArea textArea) {
-        String query1 = "SELECT FACTURADO, REMIFACT, REMISION, NRODCTO FROM TRADE WHERE ORIGEN='FAC' AND TIPODCTO='RE' AND REMISION IN(?)";
+    private void displayDataWithNrodcto(String nrodcto, JTextArea textArea) {
+        String query1 = "SELECT FACTURADO, REMIFACT, NRODCTO FROM TRADE WHERE ORIGEN='FAC' AND TIPODCTO='RE' AND NRODCTO IN(?)";
 
         try {
             PreparedStatement statement1 = conn.prepareStatement(query1);
-            statement1.setString(1, NumRemi);
+            statement1.setString(1, nrodcto);
             StringBuilder resultText = new StringBuilder();
 
             resultText.append("*DATA FACTURA*:\n\n");
@@ -37,7 +36,6 @@ public class DAOGetData {
             while (resultSet1.next()) {
                 resultText.append("FACTURADO: ").append(resultSet1.getInt("FACTURADO")).append(", ")
                         .append("FACTURA: ").append(resultSet1.getString("REMIFACT")).append(", ")
-                        .append("REMISION: ").append(resultSet1.getString("REMISION")).append(", ")
                         .append("NRODCTO: ").append(resultSet1.getString("NRODCTO")).append("\n");
             }
 
@@ -50,8 +48,8 @@ public class DAOGetData {
         }
     }
 
-    private void countEmptyRemisionRecords(JTextArea textArea) {
-        String query = "SELECT COUNT(*) AS total FROM TRADE WHERE ORIGEN='FAC' AND TIPODCTO='RE' AND (REMISION IS NULL OR REMISION = '')";
+    private void countEmptyNrodctoRecords(JTextArea textArea) {
+        String query = "SELECT COUNT(*) AS total FROM TRADE WHERE ORIGEN='FAC' AND TIPODCTO='RE' AND (NRODCTO IS NULL OR NRODCTO = '')";
 
         try {
             PreparedStatement statement = conn.prepareStatement(query);
@@ -59,11 +57,11 @@ public class DAOGetData {
             if (resultSet.next()) {
                 int total = resultSet.getInt("total");
                 textArea.setEditable(false);
-                textArea.setText("Total de registros con remisión vacía: " + total);
+                textArea.setText("Total de registros con número de documento vacío: " + total);
             }
 
         } catch (SQLException ex) {
-            JOptionPane.showMessageDialog(null, "Error al contar los registros con remisión vacía: " + ex.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al contar los registros con número de documento vacío: " + ex.getMessage());
             ex.printStackTrace();
         }
     }
