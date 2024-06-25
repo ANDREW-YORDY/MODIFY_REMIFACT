@@ -1,14 +1,23 @@
 // RemFacAntiDesign
 package com.uni.gui;
 
+import com.uni.core.doe.DAOGetData;
+import com.uni.core.doe.DAOUpdateData;
 import com.uni.persistence.DBAdminConn;
+import java.sql.Connection;
 
 
 public class GUIAntiRemFactMain extends javax.swing.JFrame {
-
+    
+    private final DAOGetData xDAOGetData;
+    private final DAOUpdateData xDAOUpdateData;
 
     public GUIAntiRemFactMain() {
         initComponents();
+        DBAdminConn dbConn = new DBAdminConn(); // Crear una única instancia de DBAdminConn
+        Connection connection = dbConn.DBGoToConnection(); // Obtener la conexión
+        xDAOGetData = new DAOGetData(connection); // Pasar la misma conexión a ambos controladores
+        xDAOUpdateData = new DAOUpdateData(connection);
     }
 
     @SuppressWarnings("unchecked")
@@ -29,6 +38,7 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jButton_BACK_GOMENU.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jButton_BACK_GOMENU.setForeground(new java.awt.Color(51, 51, 51));
         jButton_BACK_GOMENU.setText(" Back");
         jButton_BACK_GOMENU.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jButton_BACK_GOMENU.setPreferredSize(new java.awt.Dimension(70, 22));
@@ -43,7 +53,7 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
 
         jLabel_TitleMain.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel_TitleMain.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_TitleMain.setText("MODIFICACIÓN DE FACTURA REMI-FACT");
+        jLabel_TitleMain.setText("MODIFICACIÓN DE FACTURA CON REMISIÓN");
 
         jLabel_RE.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel_RE.setText("INGRESAR REMISION");
@@ -52,6 +62,7 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
         jTextField_REMI_IN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         jButton_UPDTBTN_ANTIREMFACT.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton_UPDTBTN_ANTIREMFACT.setForeground(new java.awt.Color(51, 51, 51));
         jButton_UPDTBTN_ANTIREMFACT.setText("INGREZAR REMISION");
         jButton_UPDTBTN_ANTIREMFACT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jButton_UPDTBTN_ANTIREMFACT.setPreferredSize(new java.awt.Dimension(197, 28));
@@ -66,10 +77,10 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
         jTextArea_ViewPrevAntiRemFac.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jTextArea_ViewPrevAntiRemFac.setRows(5);
         jTextArea_ViewPrevAntiRemFac.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
-        jTextArea_ViewPrevAntiRemFac.setPreferredSize(new java.awt.Dimension(192, 74));
         jScrollPane1.setViewportView(jTextArea_ViewPrevAntiRemFac);
 
         jButton_SEARCHBTN_ANTIREMFACT.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jButton_SEARCHBTN_ANTIREMFACT.setForeground(new java.awt.Color(51, 51, 51));
         jButton_SEARCHBTN_ANTIREMFACT.setText("BUSCAR REMISION");
         jButton_SEARCHBTN_ANTIREMFACT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jButton_SEARCHBTN_ANTIREMFACT.setPreferredSize(new java.awt.Dimension(197, 28));
@@ -88,26 +99,19 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
         jPanel_CONTENTLayout.setHorizontalGroup(
             jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_CONTENTLayout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addComponent(jLabel_TitleMain, javax.swing.GroupLayout.PREFERRED_SIZE, 370, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 51, Short.MAX_VALUE))
-            .addGroup(jPanel_CONTENTLayout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jButton_SEARCHBTN_ANTIREMFACT, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_UPDTBTN_ANTIREMFACT, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel_FOOT_TEXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel_TitleMain, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel_CONTENTLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton_SEARCHBTN_ANTIREMFACT, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton_UPDTBTN_ANTIREMFACT, javax.swing.GroupLayout.Alignment.CENTER, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1)))
-                    .addGroup(jPanel_CONTENTLayout.createSequentialGroup()
-                        .addGap(72, 72, 72)
+                        .addGap(57, 57, 57)
                         .addComponent(jLabel_RE, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
                         .addComponent(jTextField_REMI_IN, javax.swing.GroupLayout.PREFERRED_SIZE, 154, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel_CONTENTLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel_FOOT_TEXT, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGap(0, 105, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel_CONTENTLayout.setVerticalGroup(
@@ -115,13 +119,13 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
             .addGroup(jPanel_CONTENTLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel_TitleMain, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78)
+                .addGap(31, 31, 31)
                 .addGroup(jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTextField_REMI_IN, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_RE, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(35, 35, 35)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 106, Short.MAX_VALUE)
                 .addComponent(jButton_SEARCHBTN_ANTIREMFACT, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton_UPDTBTN_ANTIREMFACT, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -136,12 +140,9 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel_CONTENT, javax.swing.GroupLayout.DEFAULT_SIZE, 474, Short.MAX_VALUE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton_BACK_GOMENU, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                .addComponent(jButton_BACK_GOMENU, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(389, Short.MAX_VALUE))
+            .addComponent(jPanel_CONTENT, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 504, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -169,14 +170,14 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
         String remisionNum = jTextField_REMI_IN.getText().trim();
 
         // Llamar al método del controlador para actualizar las tablas
-        //remfactRevise.updateRemifactNRInBothTables(remisionNum);
-        //remfactRevise.limpiarCampos(jTextField_REMI_IN, jTextArea_ViewPrevAntiRemFac);
+        xDAOUpdateData.updateRemifactNRInBothTables(remisionNum);
+        xDAOUpdateData.limpiarCampos(jTextField_REMI_IN, jTextArea_ViewPrevAntiRemFac);
     }//GEN-LAST:event_jButton_UPDTBTN_ANTIREMFACTActionPerformed
 
     private void jButton_SEARCHBTN_ANTIREMFACTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SEARCHBTN_ANTIREMFACTActionPerformed
         //remfactObtain.testBTN();
         String NumRemi = jTextField_REMI_IN.getText();
-        //remfactObtain.DisplayDataTables(NumRemi, jTextArea_ViewPrevAntiRemFac);
+        xDAOGetData.DisplayDataTables(NumRemi, jTextArea_ViewPrevAntiRemFac);
         //        String NumRemi = jTextField_REMI_IN.getText().trim();
         //        if (NumRemi.isEmpty()) {
             //            remfactObtain.DisplayDataTables("", jTextArea_ViewPrevAntiRemFac);

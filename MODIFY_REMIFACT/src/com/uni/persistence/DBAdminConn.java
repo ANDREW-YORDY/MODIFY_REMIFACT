@@ -8,16 +8,16 @@ import javax.swing.JOptionPane;
 
 public class DBAdminConn {
 
-    String user = "rootDB";
-    String passw = "1611propio";
-    String DB = "DBTESTcanvas";
-    String pto = "1433";
-    String ip = "localhost";
-//    String user = "sa";
-//    String passw = "**lamisma2017**";
-//    String DB = "PRUEBASSISTEMASS";
+//    String user = "rootDB";
+//    String passw = "1611propio";
+//    String DB = "DBTESTcanvas";
 //    String pto = "1433";
-//    String ip = "192.168.45.9";
+//    String ip = "localhost";
+    String user = "sa";
+    String passw = "**lamisma2017**";
+    String DB = "PRUEBASSISTEMASS";
+    String pto = "1433";
+    String ip = "192.168.45.9";
 
     Connection conn = null;
 
@@ -29,11 +29,13 @@ public class DBAdminConn {
             String StrDB = "jdbc:sqlserver://" + ip + ":" + pto + ";" + "databaseName=" + DB + ";" + "encrypt=true;trustServerCertificate=true";
             conn = DriverManager.getConnection(StrDB, user, passw);
 
-            JOptionPane.showMessageDialog(null, "SUCCESSFUL CONNECTION SERVER");
+            //JOptionPane.showMessageDialog(null, "SUCCESSFUL CONNECTION SERVER");
+            System.out.println("SUCCESSFUL CONNECTION SERVER");
 
         } catch (HeadlessException | ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-            JOptionPane.showMessageDialog(null, "!FAILED CONNECTION SERVER");
+            //JOptionPane.showMessageDialog(null, "!FAILED CONNECTION SERVER");
+            System.out.println("!FAILED CONNECTION SERVER");
         }
         return conn;
     }
