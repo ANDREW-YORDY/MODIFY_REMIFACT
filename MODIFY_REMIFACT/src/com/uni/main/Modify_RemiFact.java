@@ -5,15 +5,6 @@ import com.uni.gui.GUIMenuPanelMain;
 public class Modify_RemiFact {
 
     public static void main(String[] args) {
-//        System.out.println("Saludo a ADR");
-//        
-//        DBAdminConn DBAConn = new DBAdminConn();
-//        DBAConn.DBGoToConnection();
-//
-//        GUIRemFactMain guiRemFactMain = new GUIRemFactMain();
-//        guiRemFactMain.setResizable(true);
-//        guiRemFactMain.setVisible(true);
-//        guiRemFactMain.setLocationRelativeTo(null);
          
         java.awt.EventQueue.invokeLater(new Runnable() {
             @Override

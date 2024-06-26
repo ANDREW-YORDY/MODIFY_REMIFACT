@@ -8,17 +8,17 @@ import java.sql.SQLException;
 
 public class DBAdminConn {
 
-//    String user = "rootDB";
+//    String user  = "rootDB";
 //    String passw = "1611propio";
-//    String DB = "DBTESTcanvas";
-//    String pto = "1433";
-//    String ip = "localhost";
-    String user = "sa";
+//    String DB    = "DBTESTcanvas";
+//    String pto   = "1433";
+//    String ip    = "localhost";
+//    String DB    = "CIUNIROCA";
+    String DB    = "PRUEBASSISTEMASS";
+    String user  = "sa";
     String passw = "**lamisma2017**";
-    String DB = "CIUNIROCA";
-    //String DB = "PRUEBASSISTEMASS";
-    String pto = "1433";
-    String ip = "192.168.45.9";
+    String pto   = "1433";
+    String ip    = "192.168.45.9";
 
     Connection conn = null;
 

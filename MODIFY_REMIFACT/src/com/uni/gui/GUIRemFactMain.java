@@ -41,6 +41,7 @@ public class GUIRemFactMain extends javax.swing.JFrame {
 
         jButton_SEARCHBTN.setText("🔎");
         jButton_SEARCHBTN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jButton_SEARCHBTN.setFocusPainted(false);
         jButton_SEARCHBTN.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_SEARCHBTNActionPerformed(evt);
@@ -83,6 +84,7 @@ public class GUIRemFactMain extends javax.swing.JFrame {
         jButton_UPDATEBTN_NRODOC.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N
         jButton_UPDATEBTN_NRODOC.setText("ACTUALIZAR NRODCTO");
         jButton_UPDATEBTN_NRODOC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jButton_UPDATEBTN_NRODOC.setFocusPainted(false);
         jButton_UPDATEBTN_NRODOC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_UPDATEBTN_NRODOCActionPerformed(evt);
@@ -90,6 +92,7 @@ public class GUIRemFactMain extends javax.swing.JFrame {
         });
 
         jCheckBox_HabilitedUpdtNumDoc.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jCheckBox_HabilitedUpdtNumDoc.setFocusPainted(false);
         jCheckBox_HabilitedUpdtNumDoc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jCheckBox_HabilitedUpdtNumDocActionPerformed(evt);
@@ -128,6 +131,7 @@ public class GUIRemFactMain extends javax.swing.JFrame {
         jButton_UPDATEBTN_REMFAC.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton_UPDATEBTN_REMFAC.setText("REHACER REMISIÓN");
         jButton_UPDATEBTN_REMFAC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jButton_UPDATEBTN_REMFAC.setFocusPainted(false);
         jButton_UPDATEBTN_REMFAC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_UPDATEBTN_REMFACActionPerformed(evt);
@@ -177,9 +181,10 @@ public class GUIRemFactMain extends javax.swing.JFrame {
                 .addComponent(jLabel_FOOT_TEXT))
         );
 
-        jButton_BACK_GOMENU.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
-        jButton_BACK_GOMENU.setText("Back");
+        jButton_BACK_GOMENU.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
+        jButton_BACK_GOMENU.setText("ATRÁS");
         jButton_BACK_GOMENU.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jButton_BACK_GOMENU.setFocusPainted(false);
         jButton_BACK_GOMENU.setPreferredSize(new java.awt.Dimension(70, 22));
         jButton_BACK_GOMENU.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

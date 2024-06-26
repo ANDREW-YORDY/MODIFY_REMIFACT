@@ -43,7 +43,7 @@ public class DAOUpdateData {
         }
 
         // Mostrar panel de confirmación
-        int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea crear esta remisión, para volver a facturar?", "Confirmar actualización", JOptionPane.YES_NO_OPTION);
+        int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea actualizar esta remisión?", "Confirmar actualización", JOptionPane.YES_NO_OPTION);
         if (confirm != JOptionPane.YES_OPTION) {
             return;
         }

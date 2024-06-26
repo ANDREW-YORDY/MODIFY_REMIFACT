@@ -28,6 +28,7 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
         jButton_UPDATE_REMIFACTNRODCTO.setForeground(new java.awt.Color(51, 51, 51));
         jButton_UPDATE_REMIFACTNRODCTO.setText("REHACER FACTURACIÓN POR REMISIÓN");
         jButton_UPDATE_REMIFACTNRODCTO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jButton_UPDATE_REMIFACTNRODCTO.setFocusPainted(false);
         jButton_UPDATE_REMIFACTNRODCTO.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton_UPDATE_REMIFACTNRODCTO.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -39,6 +40,7 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
         jButton_UPDATE_REMISION.setForeground(new java.awt.Color(51, 51, 51));
         jButton_UPDATE_REMISION.setText("INGRESAR NUEVA NR");
         jButton_UPDATE_REMISION.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jButton_UPDATE_REMISION.setFocusPainted(false);
         jButton_UPDATE_REMISION.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton_UPDATE_REMISION.setPreferredSize(new java.awt.Dimension(453, 25));
         jButton_UPDATE_REMISION.addActionListener(new java.awt.event.ActionListener() {
@@ -75,12 +77,13 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
             .addGroup(jPanel_CONTENTLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel_TITLE, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(53, 53, 53)
+                .addGap(70, 70, 70)
                 .addComponent(jButton_UPDATE_REMIFACTNRODCTO, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addComponent(jButton_UPDATE_REMISION, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(54, 54, 54)
-                .addComponent(jLabel_iMG_UNI_BACKG, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(72, 72, 72)
+                .addComponent(jLabel_iMG_UNI_BACKG)
+                .addContainerGap())
         );
 
         jLabel_FOOT_TEXT.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -107,9 +110,9 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jPanel_CONTENT, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel_FOOT_TEXT)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
