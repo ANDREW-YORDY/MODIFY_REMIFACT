@@ -69,7 +69,7 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
 
         jButton_UPDTBTN_ANTIREMFACT.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton_UPDTBTN_ANTIREMFACT.setForeground(new java.awt.Color(51, 51, 51));
-        jButton_UPDTBTN_ANTIREMFACT.setText("INGRESAR REMISION");
+        jButton_UPDTBTN_ANTIREMFACT.setText("INGRESAR NUEVA REMISIÓN");
         jButton_UPDTBTN_ANTIREMFACT.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jButton_UPDTBTN_ANTIREMFACT.setPreferredSize(new java.awt.Dimension(197, 28));
         jButton_UPDTBTN_ANTIREMFACT.addActionListener(new java.awt.event.ActionListener() {
@@ -102,7 +102,7 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("INGRESAR NÚMERO DE REMISIÓN PARA REHACER FACTURACIÓN");
+        jLabel1.setText("INGRESAR NUEVO NÚMERO DE REMISIÓN RELACIONADO CON EL NRODCTO");
 
         jTextField_REMICREATE_IN.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jTextField_REMICREATE_IN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -143,9 +143,8 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
         jPanel_CONTENTLayout.setVerticalGroup(
             jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel_CONTENTLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel_TitleMain, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel_RE, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)

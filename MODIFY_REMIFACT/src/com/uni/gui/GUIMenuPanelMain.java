@@ -26,7 +26,7 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
 
         jButton_UPDATE_REMIFACTNRODCTO.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton_UPDATE_REMIFACTNRODCTO.setForeground(new java.awt.Color(51, 51, 51));
-        jButton_UPDATE_REMIFACTNRODCTO.setText("ACTUALIZAR FACTURA CON NUM DE DOCUMENTO");
+        jButton_UPDATE_REMIFACTNRODCTO.setText("REHACER FACTURACIÓN POR REMISIÓN");
         jButton_UPDATE_REMIFACTNRODCTO.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jButton_UPDATE_REMIFACTNRODCTO.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton_UPDATE_REMIFACTNRODCTO.addActionListener(new java.awt.event.ActionListener() {
@@ -37,7 +37,7 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
 
         jButton_UPDATE_REMISION.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jButton_UPDATE_REMISION.setForeground(new java.awt.Color(51, 51, 51));
-        jButton_UPDATE_REMISION.setText("ACTUALIZAR FACTURA CON NUM DE REMISION");
+        jButton_UPDATE_REMISION.setText("INGRESAR NUEVA NR");
         jButton_UPDATE_REMISION.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jButton_UPDATE_REMISION.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton_UPDATE_REMISION.setPreferredSize(new java.awt.Dimension(453, 25));
@@ -47,14 +47,14 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
             }
         });
 
-        jLabel_TITLE.setFont(new java.awt.Font("Cambria", 1, 24)); // NOI18N
+        jLabel_TITLE.setFont(new java.awt.Font("Arial", 1, 24)); // NOI18N
         jLabel_TITLE.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel_TITLE.setText("MENÚ");
 
         jLabel_iMG_UNI_BACKG.setBackground(new java.awt.Color(51, 51, 51));
         jLabel_iMG_UNI_BACKG.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel_iMG_UNI_BACKG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_iMG_UNI_BACKG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/dian.png"))); // NOI18N
+        jLabel_iMG_UNI_BACKG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/logo-uniroca.png"))); // NOI18N
         jLabel_iMG_UNI_BACKG.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel_CONTENTLayout = new javax.swing.GroupLayout(jPanel_CONTENT);
@@ -79,8 +79,8 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
                 .addComponent(jButton_UPDATE_REMIFACTNRODCTO, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addComponent(jButton_UPDATE_REMISION, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jLabel_iMG_UNI_BACKG, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(54, 54, 54)
+                .addComponent(jLabel_iMG_UNI_BACKG, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jLabel_FOOT_TEXT.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N

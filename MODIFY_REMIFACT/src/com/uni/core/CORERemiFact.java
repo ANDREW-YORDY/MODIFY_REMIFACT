@@ -41,14 +41,14 @@ public class CORERemiFact {
 
             //resultText.append("- - - - - - - - - - - -  - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -");
             // Resultados de la tabla MVTRADE
-            resultText.append("\n*DATA MVTRADE*:\n");
-            ResultSet resultSet2 = statement2.executeQuery();
-            while (resultSet2.next()) {
-                resultText.append("FACTURADO:").append(resultSet2.getInt("FACTURADO")).append(",")
-                        .append("REMIFACT:").append(resultSet2.getString("REMIFACT")).append(",")
-                        .append("NRODCTO:").append(resultSet2.getString("NRODCTO")).append(",")
-                        .append("CANTREMIS:").append(resultSet2.getInt("CANTREMIS")).append("\n");
-            }
+//            resultText.append("\n*DATA MVTRADE*:\n");
+//            ResultSet resultSet2 = statement2.executeQuery();
+//            while (resultSet2.next()) {
+//                resultText.append("FACTURADO:").append(resultSet2.getInt("FACTURADO")).append(",")
+//                        .append("REMIFACT:").append(resultSet2.getString("REMIFACT")).append(",")
+//                        .append("NRODCTO:").append(resultSet2.getString("NRODCTO")).append(",")
+//                        .append("CANTREMIS:").append(resultSet2.getInt("CANTREMIS")).append("\n");
+//            }
 
             textArea.setEditable(false);
             textArea.setText(resultText.toString());

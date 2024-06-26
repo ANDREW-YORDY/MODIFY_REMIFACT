@@ -63,7 +63,7 @@ public class GUIRemFactMain extends javax.swing.JFrame {
 
         jLabel_TITLE.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel_TITLE.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_TITLE.setText("ACTUALIZADOR DE FACTURA CON NRODCTO");
+        jLabel_TITLE.setText("MÓDULO PARA REFACTURAR REMISIÓN");
         jLabel_TITLE.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         jLabel_FOOT_TEXT.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
@@ -71,6 +71,7 @@ public class GUIRemFactMain extends javax.swing.JFrame {
         jLabel_FOOT_TEXT.setText("Systemas UNIROCA Software");
 
         jPanel_CONT_ACTUALNRODOC.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "ACTUALIZAR NRO DOCUMENTO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Arial", 1, 12), new java.awt.Color(153, 153, 153))); // NOI18N
+        jPanel_CONT_ACTUALNRODOC.setFont(new java.awt.Font("Arial", 0, 11)); // NOI18N
 
         jLabel_NEWNRODOC_IN.setFont(new java.awt.Font("Arial", 0, 10)); // NOI18N
         jLabel_NEWNRODOC_IN.setText("INGRESE EL NUEVO NRODCTO");
@@ -125,7 +126,7 @@ public class GUIRemFactMain extends javax.swing.JFrame {
         );
 
         jButton_UPDATEBTN_REMFAC.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jButton_UPDATEBTN_REMFAC.setText("ACTUALIZAR REMISION");
+        jButton_UPDATEBTN_REMFAC.setText("REHACER REMISIÓN");
         jButton_UPDATEBTN_REMFAC.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jButton_UPDATEBTN_REMFAC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -160,9 +161,8 @@ public class GUIRemFactMain extends javax.swing.JFrame {
         jPanel_CONTENTLayout.setVerticalGroup(
             jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_CONTENTLayout.createSequentialGroup()
-                .addContainerGap()
                 .addComponent(jLabel_TITLE, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32)
+                .addGap(43, 43, 43)
                 .addGroup(jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jTextField_NRODOC_IN, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton_SEARCHBTN, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

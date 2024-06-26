@@ -15,8 +15,8 @@ public class DBAdminConn {
 //    String ip = "localhost";
     String user = "sa";
     String passw = "**lamisma2017**";
-    //String DB = "CIUNIROCA";
-    String DB = "PRUEBASSISTEMASS";
+    String DB = "CIUNIROCA";
+    //String DB = "PRUEBASSISTEMASS";
     String pto = "1433";
     String ip = "192.168.45.9";
 
