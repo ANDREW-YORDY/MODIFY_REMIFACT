@@ -59,10 +59,13 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
 
         jLabel_RE.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         jLabel_RE.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel_RE.setText("CONSULTAR REMISIÓN CON NRO DE  DOCUMENTO");
+        jLabel_RE.setText("CONSULTAR REMISIÓN POR NRO DE  DOCUMENTO");
 
-        jTextField_REMI_IN.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jTextField_REMI_IN.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jTextField_REMI_IN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField_REMI_IN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
+        jTextField_REMI_IN.setCursor(new java.awt.Cursor(java.awt.Cursor.TEXT_CURSOR));
+        jTextField_REMI_IN.setName(""); // NOI18N
 
         jButton_UPDTBTN_ANTIREMFACT.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jButton_UPDTBTN_ANTIREMFACT.setForeground(new java.awt.Color(51, 51, 51));
@@ -97,10 +100,12 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
         jLabel_FOOT_TEXT.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel_FOOT_TEXT.setText("Systemas UNIROCA Software");
 
-        jLabel1.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("INGRESAR NÚMERO DE REMISIÓN PARA REHACER FACTURACIÓN");
 
+        jTextField_REMICREATE_IN.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jTextField_REMICREATE_IN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField_REMICREATE_IN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
         jTextField_REMICREATE_IN.setPreferredSize(new java.awt.Dimension(2, 17));
         jTextField_REMICREATE_IN.addActionListener(new java.awt.event.ActionListener() {
@@ -154,7 +159,7 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
                 .addComponent(jTextField_REMICREATE_IN, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(57, 57, 57)
                 .addComponent(jButton_UPDTBTN_ANTIREMFACT, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                 .addComponent(jLabel_FOOT_TEXT)
                 .addContainerGap())
         );
@@ -199,7 +204,7 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
 
         // Llamar al método del controlador para actualizar las tablas
         xDAOUpdateData.updateRemifactNRInBothTables(documentNum,remissionNum);
-        xDAOUpdateData.limpiarCampos(jTextField_REMI_IN, jTextArea_ViewPrevAntiRemFac);
+        xDAOUpdateData.limpiarCampos(jTextField_REMI_IN, jTextArea_ViewPrevAntiRemFac,jTextField_REMICREATE_IN);
     }//GEN-LAST:event_jButton_UPDTBTN_ANTIREMFACTActionPerformed
 
     private void jButton_SEARCHBTN_ANTIREMFACTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_SEARCHBTN_ANTIREMFACTActionPerformed

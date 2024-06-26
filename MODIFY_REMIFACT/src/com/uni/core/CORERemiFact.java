@@ -61,7 +61,8 @@ public class CORERemiFact {
 
     // Método para actualizar el NRODCTO en ambas tablas
     public void updateNroDctoInInBothTables(String oldCod, String newCod) {
-        int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea actualizar la remisión?", "Confirmar actualización", JOptionPane.YES_NO_OPTION);
+        // Mostrar panel de confirmación
+        int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea actualizar el Nro de Documento?", "Confirmar actualización", JOptionPane.YES_NO_OPTION);
         if (confirm != JOptionPane.YES_OPTION) {
             return;
         }
@@ -112,6 +113,11 @@ public class CORERemiFact {
 
     // Método para actualizar campos en ambas tablas
     public void updateFieldsInBothTables(String nrodcto) {
+        // Mostrar panel de confirmación
+        int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea actualizar los campos de la remisión?", "Confirmar actualización", JOptionPane.YES_NO_OPTION);
+        if (confirm != JOptionPane.YES_OPTION) {
+            return;
+        }
         try {
             // Obtener el valor actual de REMIFACT
             String currentRemifact = getCurrentRemifact(nrodcto);

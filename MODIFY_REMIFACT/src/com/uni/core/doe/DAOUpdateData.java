@@ -9,19 +9,19 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class DAOUpdateData {
-
+    
     private final Connection conn;
-
+    
     public DAOUpdateData(Connection conn) {
         this.conn = conn;
     }
-
+    
     public void updateRemifactNRInBothTables(String nrodcto, String nroremis) {
         if (nrodcto.isEmpty() || nroremis.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Los campos no pueden estar vacíos.");
             return;
         }
-
+        
         String remifactNR = "NR" + nroremis;
 
         // Verificar si el número de documento existe en la tabla TRADE
@@ -41,9 +41,9 @@ public class DAOUpdateData {
             ex.printStackTrace();
             return;
         }
-        
+
         // Mostrar panel de confirmación
-        int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea actualizar la remisión?", "Confirmar actualización", JOptionPane.YES_NO_OPTION);
+        int confirm = JOptionPane.showConfirmDialog(null, "¿Está seguro que desea crear esta remisión, para volver a facturar?", "Confirmar actualización", JOptionPane.YES_NO_OPTION);
         if (confirm != JOptionPane.YES_OPTION) {
             return;
         }
@@ -71,12 +71,13 @@ public class DAOUpdateData {
             JOptionPane.showMessageDialog(null, "Error al actualizar remisión en el MOVIMIENTO: " + ex.getMessage());
             ex.printStackTrace();
         }
-
+        
         JOptionPane.showMessageDialog(null, "Remisión actualizada correctamente.");
     }
-
-    public void limpiarCampos(JTextField jTextField_NRODCTO_IN, JTextArea jTextArea_ViewPrevAntiRemFac) {
+    
+    public void limpiarCampos(JTextField jTextField_NRODCTO_IN, JTextArea jTextArea_ViewPrevAntiRemFac, JTextField jTextField_REMICREATE_IN) {
         jTextField_NRODCTO_IN.setText("");
         jTextArea_ViewPrevAntiRemFac.setText("");
+        jTextField_REMICREATE_IN.setText("");
     }
 }

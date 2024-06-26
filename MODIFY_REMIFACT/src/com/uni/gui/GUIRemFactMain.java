@@ -47,7 +47,8 @@ public class GUIRemFactMain extends javax.swing.JFrame {
             }
         });
 
-        jTextField_NRODOC_IN.setFont(new java.awt.Font("Arial", 1, 12)); // NOI18N
+        jTextField_NRODOC_IN.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jTextField_NRODOC_IN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField_NRODOC_IN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         jLabel_NroDoc.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -75,6 +76,7 @@ public class GUIRemFactMain extends javax.swing.JFrame {
         jLabel_NEWNRODOC_IN.setText("INGRESE EL NUEVO NRODCTO");
 
         jTextField_NEWNRODOC_IN.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
+        jTextField_NEWNRODOC_IN.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         jTextField_NEWNRODOC_IN.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 204, 204)));
 
         jButton_UPDATEBTN_NRODOC.setFont(new java.awt.Font("Arial", 1, 10)); // NOI18N

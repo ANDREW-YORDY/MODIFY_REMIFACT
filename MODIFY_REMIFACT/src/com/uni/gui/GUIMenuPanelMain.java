@@ -54,20 +54,20 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
         jLabel_iMG_UNI_BACKG.setBackground(new java.awt.Color(51, 51, 51));
         jLabel_iMG_UNI_BACKG.setFont(new java.awt.Font("Arial", 0, 16)); // NOI18N
         jLabel_iMG_UNI_BACKG.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel_iMG_UNI_BACKG.setIcon(new javax.swing.ImageIcon("C:\\Users\\Conexion\\Downloads\\ADR\\DEV\\IMG\\RemiUpdServiceSoftmodeltestvll\\logo-uniroca.png")); // NOI18N
+        jLabel_iMG_UNI_BACKG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/dian.png"))); // NOI18N
         jLabel_iMG_UNI_BACKG.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout jPanel_CONTENTLayout = new javax.swing.GroupLayout(jPanel_CONTENT);
         jPanel_CONTENT.setLayout(jPanel_CONTENTLayout);
         jPanel_CONTENTLayout.setHorizontalGroup(
             jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel_iMG_UNI_BACKG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(jLabel_TITLE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel_CONTENTLayout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel_CONTENTLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton_UPDATE_REMISION, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE)
-                    .addComponent(jButton_UPDATE_REMIFACTNRODCTO, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE))
+                .addGroup(jPanel_CONTENTLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel_iMG_UNI_BACKG, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton_UPDATE_REMISION, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE)
+                    .addComponent(jButton_UPDATE_REMIFACTNRODCTO, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 571, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel_CONTENTLayout.setVerticalGroup(
@@ -80,8 +80,7 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 71, Short.MAX_VALUE)
                 .addComponent(jButton_UPDATE_REMISION, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
-                .addComponent(jLabel_iMG_UNI_BACKG, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addComponent(jLabel_iMG_UNI_BACKG, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         jLabel_FOOT_TEXT.setFont(new java.awt.Font("Arial", 0, 8)); // NOI18N
