@@ -133,7 +133,7 @@ public class CORERemiFact {
             }
 
             // Verificar si la cadena "FACTURA ANTERIOR: [valor]" ya existe en currentNota
-            String facturaAnteriorEntry = "FACTURA ANTERIOR: " + currentRemifact + "- NOTA ANTERIOR: ";
+            String facturaAnteriorEntry = "FACTURA ANTERIOR: " + currentRemifact + "-  NOTA ANTERIOR: ";
             if (!currentNota.contains(facturaAnteriorEntry)) {
                 // Concatenar el valor actual de NOTA con el nuevo valor de REMIFACT
                 String newNota =  facturaAnteriorEntry + currentNota.trim();

@@ -1,11 +1,17 @@
 // MENUPANELRemFacDesign
 package com.uni.gui;
 
+import javax.swing.ImageIcon;
+
 public class GUIMenuPanelMain extends javax.swing.JFrame {
 
 
     public GUIMenuPanelMain() {
         initComponents();
+        setResizable(false); // Inhabilitar el redimensionamiento
+        setMaximizedBounds(null); // Inhabilitar la opción de maximizar
+        ImageIcon icon = new ImageIcon(getClass().getResource("/resources/logo-uniroca.png"));
+        jLabel_iMG_UNI_BACKG.setIcon(icon);
     }
 
     @SuppressWarnings("unchecked")
@@ -20,6 +26,8 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
         jLabel_FOOT_TEXT = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("MÓDULO DE REMISIÓN");
+        setAlwaysOnTop(true);
 
         jPanel_CONTENT.setForeground(new java.awt.Color(255, 255, 255));
         jPanel_CONTENT.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
@@ -120,7 +128,8 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
 
     private void jButton_UPDATE_REMIFACTNRODCTOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_UPDATE_REMIFACTNRODCTOActionPerformed
         GUIRemFactMain design = new GUIRemFactMain();
-        design.setResizable(true);
+        design.setResizable(false);
+        design.setMaximizedBounds(null);
         design.setVisible(true);
         design.setLocationRelativeTo(null);
         dispose(); // Cierra la interfaz actual
@@ -128,7 +137,8 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
 
     private void jButton_UPDATE_REMISIONActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_UPDATE_REMISIONActionPerformed
         GUIAntiRemFactMain antiDesign = new GUIAntiRemFactMain();
-        antiDesign.setResizable(true);
+        antiDesign.setResizable(false);
+        antiDesign.setMaximizedBounds(null);
         antiDesign.setVisible(true);
         antiDesign.setLocationRelativeTo(null);
         dispose(); // Cierra la interfaz actual
@@ -177,4 +187,6 @@ public class GUIMenuPanelMain extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel_iMG_UNI_BACKG;
     private javax.swing.JPanel jPanel_CONTENT;
     // End of variables declaration//GEN-END:variables
+
+    
 }

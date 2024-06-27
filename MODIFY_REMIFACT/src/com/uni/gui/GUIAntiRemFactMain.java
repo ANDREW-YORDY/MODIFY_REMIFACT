@@ -194,7 +194,8 @@ public class GUIAntiRemFactMain extends javax.swing.JFrame {
 
     private void jButton_BACK_GOMENUActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_BACK_GOMENUActionPerformed
         GUIMenuPanelMain menuPanel = new GUIMenuPanelMain();
-        menuPanel.setResizable(true);
+        menuPanel.setResizable(false);
+        menuPanel.setMaximizedBounds(null);
         menuPanel.setVisible(true);
         menuPanel.setLocationRelativeTo(null);
         dispose(); // Cierra la interfaz actual
